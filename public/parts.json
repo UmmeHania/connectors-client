@@ -1,0 +1,56 @@
+[
+    {
+        "_id": 1,
+        "name": "Brushless Wrench",
+        "img": "https://i.ibb.co/thxJ6GH/81-Vle-P-Uip-L-AC-UL320.jpg",
+        "price": "$249",
+        "description": "DEWALT 20V MAX XR Brushless High Torque 1/2 Impact Wrench with Detent Anvil, Cordless,",
+        "minQuantity": 10,
+        "availableQuantity": 100
+    },
+    {
+        "_id": 2,
+        "name": "Screwdrivers Set",
+        "img": "https://i.ibb.co/hdFHHSN/61r4a-MI-r-L-AC-UL320.jpg",
+        "price": "$40",
+        "description": "CRAFTSMAN Pliers, 6-Piece Mini Set with Pouch (CMHT81716) ",
+        "minQuantity": 10,
+        "availableQuantity": 200
+    },
+    {
+        "_id": 3,
+        "name": "Oscillating Multi-Tool",
+        "img": "https://i.ibb.co/F71kVzv/61-AY-Cae-Vf-L-AC-UL320.jpg",
+        "price": "$179",
+        "description": "DEWALT 20V Max XR Oscillating Multi-Tool, Variable Speed, Tool Only (DCS356B) ",
+        "minQuantity": 10,
+        "availableQuantity": 150
+    },
+    {
+        "_id": 4,
+        "name": "Digital Caliper",
+        "img": "https://i.ibb.co/CsnvvTY/61-YTq1mkj-RL-AC-UY218.jpg",
+        "price": "$80",
+        "description": "NEIKO 01407A Electronic Digital Caliper | 0-6 Inches | Stainless Steel Construction with Large LCD Screen | Quick Change Button.",
+        "minQuantity": 10,
+        "availableQuantity": 100
+    },
+    {
+        "_id": 5,
+        "name": "Precision Rotary Tool ",
+        "img": "https://i.ibb.co/ZxgV5b5/61-QXc-PH4-Yd-S-AC-UL320.jpg",
+        "price": "$300",
+        "description": "Techtronics Ryobi ONE+ 18V PRT100B Cordless Precision Rotary Tool (Tool Only- Battery and Charger NOT INCLUDED) .",
+        "minQuantity": 10,
+        "availableQuantity": 300
+    },
+    {
+        "_id": 6,
+        "name": "Jaw Opener",
+        "img": "https://i.ibb.co/PrmzJbg/61-LVd-Hg-04-L-AC-UL320.jpg",
+        "price": "$500",
+        "description": "Wilton 11704 2-Axis Precision Angular Vise 3-Inch Jaw Opening, 1-5/16-Inch Jaw Depth,1-5/16-Inch Jaw Depth",
+        "minQuantity": 10,
+        "availableQuantity": 400
+    }
+]

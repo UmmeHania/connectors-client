@@ -14,7 +14,7 @@ const Banner = () => {
 
                             <h1 className="text-4xl font-bold text-[#302d7f]">Build Tools,Build Quality</h1>
                             <p className="py-6">We are the Quality Hand tools Manufacturer in UK and offers Engineering Excellence for the world's most demanding industries. Our Tools range includes Industrial Tools, Precision Tools, Cutting Tools, Air Tools and Lubrication tools etc</p>
-                            <button className='btn bg-[#ffd400] hover:bg-[#302d7f] hover:text-white text-black'>Explore Us</button>
+                            <button className='btn btn-accent font-bold text-black'>Explore Us</button>
                         </div>
                         <div className='sm:h-[60vh] shrink-0 px-20'>
                             <img src={banner} className="lg:h-[70vh] " alt='' />

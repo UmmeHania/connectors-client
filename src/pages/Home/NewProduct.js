@@ -11,7 +11,7 @@ const NewProduct = () => {
                     <h2 class="card-title text-3xl font-bold">New Tools just released!</h2>
 
                     <p className='text-lg'>SuperHandy Air Hose Reel Retractable 3/8" Inch x 100 Feet 300 Psi / 20 Bar Spring Driven Steel Portable Quad Pod Heavy Duty Industrial Premium Commercial Flex Hybrid Polymer </p>
-                    <div> <button class="btn btn-primary">Explore now</button></div>
+                    <div> <button class="btn btn-accent font-bold">Explore now</button></div>
                 </div>
             </div>
         </div>
