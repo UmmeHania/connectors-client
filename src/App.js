@@ -11,6 +11,7 @@ import Navbar from "./pages/Shared/Navbar";
 import MyOrders from "./pages/Dashboard/MyOrders";
 import AddAReview from "./pages/Dashboard/AddAReview";
 import MyProfile from "./pages/Dashboard/MyProfile";
+import MyPortfolio from "./pages/MyPortfolio/MyPortfolio";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
-        <Route path='/dashboard' element={<Dashboard></Dashboard>}></Route>
+        <Route path='/myportfolio' element={<MyPortfolio></MyPortfolio>}></Route>
 
         <Route path='/dashboard' element={
           <RequireAuth>
