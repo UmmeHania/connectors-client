@@ -1,7 +1,18 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Part = ({ part }) => {
     const { _id, name, img, description, price, minQuantity, availableQuantity } = part;
+
+    const navigate = useNavigate();
+
+
+    const navigateToPartDetail = _id => {
+        navigate(`/parts/${_id}`);
+
+    }
+
+
     return (
         <div>
             <div className="card lg:max-w-lg bg-base shadow-xl">
@@ -14,7 +25,7 @@ const Part = ({ part }) => {
                     <h3 className='font-bold'>Price: {price}</h3>
                     <h3 className='font-bold'>Available Quantity: {availableQuantity}</h3>
                     <h3 className='font-bold'>Minimum Order Quantity: {minQuantity}</h3>
-                    <button className='btn btn-accent font-bold mt-3'>Purchase</button>
+                    <button className='btn btn-accent font-bold mt-3' onClick={() => navigateToPartDetail(_id)} >Purchase</button>
                 </div>
             </div>
         </div>

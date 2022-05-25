@@ -12,6 +12,7 @@ import MyOrders from "./pages/Dashboard/MyOrders";
 import AddAReview from "./pages/Dashboard/AddAReview";
 import MyProfile from "./pages/Dashboard/MyProfile";
 import MyPortfolio from "./pages/MyPortfolio/MyPortfolio";
+import Purchase from "./pages/Purchase/Purchase";
 
 function App() {
   return (
@@ -23,6 +24,12 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route path='/myportfolio' element={<MyPortfolio></MyPortfolio>}></Route>
+
+        <Route path='/parts/:id' element={
+          <RequireAuth>
+            <Purchase></Purchase>
+          </RequireAuth>
+        } />
 
         <Route path='/dashboard' element={
           <RequireAuth>
