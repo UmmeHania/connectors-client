@@ -13,6 +13,8 @@ import AddAReview from "./pages/Dashboard/AddAReview";
 import MyProfile from "./pages/Dashboard/MyProfile";
 import MyPortfolio from "./pages/MyPortfolio/MyPortfolio";
 import Purchase from "./pages/Purchase/Purchase";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -45,7 +47,7 @@ function App() {
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
-
+      <ToastContainer />
     </div>
   );
 }

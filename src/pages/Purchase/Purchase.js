@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { useForm } from "react-hook-form";
+import { toast } from 'react-toastify';
 
 
 const Purchase = () => {
@@ -26,8 +27,34 @@ const Purchase = () => {
 
 
     const onSubmit = async data => {
+        console.log(data.mobileNumber);
 
-        console.log(data, 'data');
+
+        console.log('data', data);
+        const order = {
+            orderId: _id,
+            productName: name,
+            customerName: user.displayName,
+            customer: user.email,
+            mobile: data.mobileNumber,
+            address: data.address
+        }
+        fetch('http://localhost:5000/order', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(order)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.insertedId) {
+                    toast.success('Order Placed Successfully')
+                }
+            })
+        //reset();
+
     }
 
 
@@ -44,8 +71,7 @@ const Purchase = () => {
                         <h2 class="text-lg font-semibold">Price: {price} </h2>
                         <h2 class="text-lg font-semibold">Available Quantity: {availableQuantity} </h2>
                         <h2 class="text-lg font-semibold">Minimum Order Quantity: {minQuantity} </h2>
-                        <h2>{user.email}</h2>
-                        <h2>{user.displayName}</h2>
+
 
                         {/* <div class="card-actions justify-center">
                             <button class="btn btn-accent">Order now</button>
@@ -65,7 +91,7 @@ const Purchase = () => {
                             </label>
                             <input
                                 type="text"
-                                value={user.displayName}
+                                defaultValue={user.displayName}
                                 className="input input-bordered w-full px-20"
                             />
                         </div>
@@ -76,7 +102,7 @@ const Purchase = () => {
                             </label>
                             <input
                                 type="email"
-                                value={user.email}
+                                defaultValue={user.email}
                                 className="input input-bordered w-full"
                             />
                         </div>
@@ -137,11 +163,11 @@ const Purchase = () => {
                                 })}
                             />
                             <label className="label">
-                                {errors.name?.type === 'required' && <span className="label-text-alt text-red-500">{errors.name.message}</span>}
+                                {errors.name?.type === 'required' && <span className="label-text-alt text-red-500">{errors.number.message}</span>}
                             </label>
                         </div>
 
-                        <input className='btn w-full text-black btn-accent' type="submit" value="Order Now" />
+                        <input className='btn w-full text-black btn-accent mb-3' type="submit" value="Order Now" />
                     </form>
                 </div>
             </div>
