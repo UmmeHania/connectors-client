@@ -5,13 +5,27 @@ import UsersRow from './UsersRow';
 
 const MakeAdmin = () => {
 
-    const [users, setUsers] = useState([]);
+    // const [users, setUsers] = useState([]);
 
-    useEffect(() => {
-        fetch('http://localhost:5000/user')
-            .then(res => res.json())
-            .then(data => setUsers(data))
-    }, [])
+    // useEffect(() => {
+    //     fetch('http://localhost:5000/user', {
+    //         method: 'GET',
+    //         headers: {
+    //             'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+    //         },
+    //     })
+    //         .then(res => res.json())
+    //         .then(data => setUsers(data))
+    // }, [])
+    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/user', {
+        method: 'GET',
+        headers: {
+            authorization: `Bearer ${localStorage.getItem('accessToken')}`
+        }
+    }).then(res => res.json()));
+    if (isLoading) {
+        return <Loading></Loading>
+    }
 
     // const { data: users, isLoading } = useQuery('users', () => fetch('http://localhost:5000/user').then(res => res.json()));
     // console.log(users);
@@ -39,6 +53,7 @@ const MakeAdmin = () => {
                                 key={user._id}
                                 user={user}
                                 index={index}
+                                refetch={refetch}
                             ></UsersRow>)
                         }
                     </tbody>
