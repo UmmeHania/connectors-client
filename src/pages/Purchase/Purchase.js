@@ -47,7 +47,7 @@ const Purchase = () => {
             .then(data => {
                 console.log(data);
                 if (data.insertedId) {
-                    toast.success('Order Placed Successfully')
+                    toast.success('Order Confirmed')
                 }
             })
         reset();
