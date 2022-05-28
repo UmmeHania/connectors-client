@@ -5,19 +5,7 @@ import UsersRow from './UsersRow';
 
 const MakeAdmin = () => {
 
-    // const [users, setUsers] = useState([]);
-
-    // useEffect(() => {
-    //     fetch('http://localhost:5000/user', {
-    //         method: 'GET',
-    //         headers: {
-    //             'authorization': `Bearer ${localStorage.getItem('accessToken')}`
-    //         },
-    //     })
-    //         .then(res => res.json())
-    //         .then(data => setUsers(data))
-    // }, [])
-    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/user', {
+    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://vast-meadow-63021.herokuapp.com/user', {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -27,7 +15,7 @@ const MakeAdmin = () => {
         return <Loading></Loading>
     }
 
-    // const { data: users, isLoading } = useQuery('users', () => fetch('http://localhost:5000/user').then(res => res.json()));
+    // const { data: users, isLoading } = useQuery('users', () => fetch('https://vast-meadow-63021.herokuapp.com/user').then(res => res.json()));
     // console.log(users);
     // if (isLoading) {
     //     <Loading></Loading>
@@ -35,7 +23,7 @@ const MakeAdmin = () => {
 
     return (
         <div>
-            <h1 className='text-2xl'>Total Users: {users.length} :</h1>
+            {/* <h1 className='text-2xl'>Total Users: {users.length} </h1> */}
             <div class="overflow-x-auto">
                 <table class="table w-full">
 

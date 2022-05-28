@@ -18,7 +18,7 @@ const Purchase = () => {
     const { _id, name, img, price, description, availableQuantity, minQuantity } = part;
 
     useEffect(() => {
-        const url = `http://localhost:5000/parts/${id}`;
+        const url = `https://vast-meadow-63021.herokuapp.com/parts/${id}`;
         fetch(url)
             .then((res) => res.json())
             .then((data) => setPart(data));
@@ -36,7 +36,7 @@ const Purchase = () => {
             mobile: data.mobileNumber,
             address: data.address
         }
-        fetch('http://localhost:5000/order', {
+        fetch('https://vast-meadow-63021.herokuapp.com/order', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

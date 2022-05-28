@@ -13,7 +13,7 @@ const Dashboard = () => {
             <div class="drawer drawer-mobile">
                 <input id=" dashboard-sidebar" type="checkbox" class="drawer-toggle" />
                 <div class="drawer-content">
-                    <h2 className='text-3xl font-bold text-[#302d7f]'>Your Dashboard!</h2>
+                    <h2 className='text-3xl font-bold text-[#302d7f] mb-3'>Your Dashboard!</h2>
 
                     <Outlet></Outlet>
 
@@ -22,10 +22,13 @@ const Dashboard = () => {
                     <label for=" dashboard-sidebar" class="drawer-overlay"></label>
                     <ul class="menu p-4 overflow-y-auto w-60 bg-base-100 text-base-content gap-1">
                         {/* <!-- Sidebar content here --> */}
-                        <li><Link className='hover:bg-accent hover:text-white rounded-lg font-semibold' to='/dashboard'>My Orders</Link></li>
-                        <li><Link className='hover:bg-accent hover:text-white rounded-lg font-semibold' to='/dashboard/review'>Add A review</Link></li>
+                        {!admin && <li><Link className='hover:bg-accent hover:text-white rounded-lg font-semibold' to='/dashboard'>My Orders</Link></li>}
+                        {!admin && <li><Link className='hover:bg-accent hover:text-white rounded-lg font-semibold' to='/dashboard/review'>Add A review</Link></li>}
                         <li><Link className='hover:bg-accent hover:text-white rounded-lg font-semibold' to='/dashboard/myprofile'>My Profile</Link></li>
-                        {admin && <li><Link className='hover:bg-accent hover:text-white rounded-lg font-semibold' to='/dashboard/makeAdmin'>Make A Admin</Link></li>}
+                        {admin && <li><Link className='hover:bg-accent hover:text-white rounded-lg font-semibold' to='/dashboard/makeAdmin'>Make Admin</Link></li>}
+                        {admin && <li><Link className='hover:bg-accent hover:text-white rounded-lg font-semibold' to='/dashboard/manageOrders'>Manage All Orders</Link></li>}
+                        {admin && <li><Link className='hover:bg-accent hover:text-white rounded-lg font-semibold' to='/dashboard/addProduct'>Add A Product</Link></li>}
+                        {admin && <li><Link className='hover:bg-accent hover:text-white rounded-lg font-semibold' to='/dashboard/manageProducts'>Manage Products</Link></li>}
                     </ul>
 
                 </div>
