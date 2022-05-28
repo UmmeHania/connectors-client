@@ -10,7 +10,8 @@ const useToken = user => {
                 method: 'PUT',
                 header: {
                     'content-type': 'application/json',
-                }
+                },
+                body: JSON.stringify(currentUser)
             })
                 .then(res => res.json()
                     .then(data => {

@@ -25,7 +25,10 @@ const Navbar = () => {
 
         <li>
             {user
-                ? <button className="hover:bg-accent hover:text-white rounded-lg btn btn-outline " onClick={logout}>Sign Out</button>
+                ? <>
+                    <button className="hover:bg-accent hover:text-white rounded-lg btn btn-outline " onClick={logout}>Sign Out</button>
+                    {/* <span class="badge bg-accent text-white rounded-lg px-5">{user.displayName}</span> */}
+                </>
                 : <NavLink className='hover:bg-accent hover:text-white rounded-lg ' to='/login'>
                     Login
                 </NavLink>}

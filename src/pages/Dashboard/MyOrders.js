@@ -15,6 +15,7 @@ const MyOrders = () => {
         }
     }, [user])
 
+
     return (
         <div className='my-5'>
 
@@ -35,8 +36,9 @@ const MyOrders = () => {
                                 <tr>
                                     <th>{index + 1}</th>
                                     <td>{order.productName} </td>
+
                                     <td><button class="btn btn-sm btn-accent">Pay</button></td>
-                                    <td><button class="btn btn-sm btn-accent">Delete</button></td>
+                                    <td><button class="btn btn-sm btn-error" >Delete</button></td>
                                 </tr>)
                         }
 
