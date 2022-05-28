@@ -16,6 +16,7 @@ import Purchase from "./pages/Purchase/Purchase";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import MakeAdmin from "./pages/Dashboard/MakeAdmin";
+import RequireAdmin from "./pages/Login/RequireAdmin";
 
 function App() {
   return (
