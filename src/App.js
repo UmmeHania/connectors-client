@@ -15,6 +15,7 @@ import MyPortfolio from "./pages/MyPortfolio/MyPortfolio";
 import Purchase from "./pages/Purchase/Purchase";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import MakeAdmin from "./pages/Dashboard/MakeAdmin";
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
           <Route index element={<MyOrders></MyOrders>}></Route>
           <Route path='review' element={<AddAReview></AddAReview>}></Route>
           <Route path='myprofile' element={<MyProfile></MyProfile>}></Route>
+          <Route path='makeAdmin' element={<MakeAdmin></MakeAdmin>}></Route>
 
         </Route>
 

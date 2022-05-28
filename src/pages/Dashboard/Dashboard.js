@@ -20,6 +20,7 @@ const Dashboard = () => {
                         <li><Link className='hover:bg-accent hover:text-white rounded-lg font-semibold' to='/dashboard'>My Orders</Link></li>
                         <li><Link className='hover:bg-accent hover:text-white rounded-lg font-semibold' to='/dashboard/review'>Add A review</Link></li>
                         <li><Link className='hover:bg-accent hover:text-white rounded-lg font-semibold' to='/dashboard/myprofile'>My Profile</Link></li>
+                        <li><Link className='hover:bg-accent hover:text-white rounded-lg font-semibold' to='/dashboard/makeAdmin'>Make A Admin</Link></li>
                     </ul>
 
                 </div>

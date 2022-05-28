@@ -27,9 +27,6 @@ const Purchase = () => {
 
 
     const onSubmit = async data => {
-        console.log(data.mobileNumber);
-
-
         console.log('data', data);
         const order = {
             orderId: _id,
@@ -53,7 +50,7 @@ const Purchase = () => {
                     toast.success('Order Placed Successfully')
                 }
             })
-        //reset();
+        reset();
 
     }
 
